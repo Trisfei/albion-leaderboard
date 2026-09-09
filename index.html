@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Albion Leaderboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>⚔ Albion Leaderboard</h1>
+
+<div class="filters">
+<button onclick="loadRanking('players')">Players</button>
+<button onclick="loadRanking('guilds')">Guilds</button>
+</div>
+
+<select id="server" onchange="render()">
+<option>Americas</option>
+<option>Europe</option>
+<option>Asia</option>
+</select>
+
+<select id="month" onchange="render()">
+<option>2026-01</option>
+</select>
+
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Nome</th>
+<th>Guild</th>
+<th>Kill Fame</th>
+</tr>
+</thead>
+<tbody id="ranking"></tbody>
+</table>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
